@@ -1,0 +1,10 @@
+global using Mapster;
+global using MediatR;
+global using BuildingBlocks.CQRS;
+global using BuildingBlocks;
+global using System.Data;
+global using BuildingBlocks.Library;
+global using Dapper;
+global using FluentValidation;
+global using BuildingBlocks.Models;
+global using Npgsql;
