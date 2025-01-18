@@ -19,7 +19,7 @@ internal class CreateProductCommandHandler(IProductRepository repository)
         var validationResult = ProductValidations.ValidateCreateProductRequest(command);
 
         if (!validationResult.IsValid)
-            return new Error("", validationResult.Errors[0].ErrorMessage, ErrorType.Validation);
+            return new Error("Validation_Error", validationResult.Errors[0].ErrorMessage, ErrorType.Validation);
 
         var result = await repository.AddProductAsync(command);
 

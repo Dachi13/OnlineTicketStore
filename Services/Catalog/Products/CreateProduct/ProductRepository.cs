@@ -30,11 +30,11 @@ public class ProductRepository(DapperContext context) : IProductRepository
         }
         catch (PostgresException exception)
         {
-            return new Error("", exception.Message, ErrorType.DatabaseError);
+            return new Error("Database_Exception", exception.Message, ErrorType.DatabaseError);
         }
         catch (Exception exception)
         {
-            return new Error("", exception.Message, ErrorType.InternalServerError);
+            return new Error("Internal_Error", exception.Message, ErrorType.InternalServerError);
         }
     }
 }
