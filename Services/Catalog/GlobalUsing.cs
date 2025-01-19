@@ -8,3 +8,8 @@ global using Dapper;
 global using FluentValidation;
 global using BuildingBlocks.Models;
 global using Npgsql;
+global using BuildingBlocks.Behaviors;
+global using Catalog.Products.CreateProduct;
+global using BuildingBlocks.Exceptions.Handler;
+global using HealthChecks.UI.Client;
+global using Microsoft.AspNetCore.Diagnostics.HealthChecks;
