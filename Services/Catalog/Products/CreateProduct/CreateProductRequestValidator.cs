@@ -26,6 +26,6 @@ public class CreateProductRequestValidator : AbstractValidator<CreateProductComm
         RuleFor(product => product.Price)
             .Cascade(CascadeMode.Stop)
             .NotEmpty().WithMessage("{PropertyName} is Empty")
-            .GreaterThan(0).WithMessage("Price cannot be less than 1");
+            .GreaterThan(0).WithMessage("The price must be greater than 0");
     }
 }

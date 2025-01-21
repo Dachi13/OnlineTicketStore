@@ -6,21 +6,16 @@ public record CreateProductCommand(
     string Description,
     string ImageFile,
     decimal Price)
-    : ICommand<Result<CreateProductResult>>;
+    : ICommand<CreateProductResult>;
 
 public record CreateProductResult(long Id);
 
 internal class CreateProductCommandHandler(IProductRepository repository)
-    : ICommandHandler<CreateProductCommand, Result<CreateProductResult>>
+    : ICommandHandler<CreateProductCommand, CreateProductResult>
 {
     public async Task<Result<CreateProductResult>> Handle(CreateProductCommand command,
         CancellationToken cancellationToken)
     {
-        var validationResult = ProductValidations.ValidateCreateProductRequest(command);
-
-        if (!validationResult.IsValid)
-            return new Error("Validation_Error", validationResult.Errors[0].ErrorMessage, ErrorType.Validation);
-
         var result = await repository.AddProductAsync(command);
 
         return result.IsSuccess

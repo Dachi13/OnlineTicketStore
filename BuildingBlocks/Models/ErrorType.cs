@@ -7,5 +7,6 @@ public enum ErrorType
     NotFound,
     Validation,
     DatabaseError,
-    InternalServerError
+    InternalServerError,
+    UnprocessableEntity
 }
