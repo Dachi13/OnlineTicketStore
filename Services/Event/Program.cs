@@ -1,9 +1,11 @@
+using Event.Events.CreateEvent;
+
 var builder = WebApplication.CreateBuilder(args);
 
 var connectionString = builder.Configuration.GetConnectionString("Database")!;
 
 builder.Services.AddSingleton<IDbConnection>(_ => new NpgsqlConnection(connectionString));
-builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<IEventRepository, EventRepository>();
 builder.Services.AddScoped<DapperContext>(sp => new DapperContext(sp.GetRequiredService<IConfiguration>()));
 
 // Add services to the container.
