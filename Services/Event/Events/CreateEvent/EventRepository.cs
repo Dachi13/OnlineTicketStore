@@ -1,5 +1,3 @@
-using NpgsqlTypes;
-
 namespace Event.Events.CreateEvent;
 
 public class EventRepository(DapperContext context) : IEventRepository
