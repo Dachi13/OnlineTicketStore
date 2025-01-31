@@ -3,7 +3,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildingBlocks", "BuildingB
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{9C54A3C9-172A-4CAC-8BD0-05C465751380}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog", "Services\Catalog\Catalog.csproj", "{A6006574-2988-414F-94B2-69C41884C05C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Event", "Services\Event\Event.csproj", "{A6006574-2988-414F-94B2-69C41884C05C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4A6A6552-387E-41F3-B44A-B9C53B33E660}"
 	ProjectSection(SolutionItems) = preProject

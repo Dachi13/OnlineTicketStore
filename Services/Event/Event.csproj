@@ -5,6 +5,7 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+        <RootNamespace>Event</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
@@ -12,22 +13,22 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Products\DeleteProduct\" />
-      <Folder Include="Products\GetProductById\" />
-      <Folder Include="Products\GetProductsByCategory\" />
-      <Folder Include="Products\GetProducts\" />
-      <Folder Include="Products\UpdateProduct\" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Content Include="..\..\.dockerignore">
-        <Link>.dockerignore</Link>
-      </Content>
+      <Folder Include="Events\DeleteEvent\" />
+      <Folder Include="Events\GetEventById\" />
+      <Folder Include="Events\GetEventsByCategory\" />
+      <Folder Include="Events\GetEvents\" />
+      <Folder Include="Events\UpdateEvent\" />
     </ItemGroup>
     
     <ItemGroup>
         <PackageReference Include="AspNetCore.HealthChecks.UI.Client" Version="8.0.1" />
         <PackageReference Include="AspNetCore.HealthChecks.NpgSql" Version="8.0.2" />
+    </ItemGroup>
+    
+    <ItemGroup>
+      <Content Include="..\..\.dockerignore">
+        <Link>.dockerignore</Link>
+      </Content>
     </ItemGroup>
 
 </Project>
