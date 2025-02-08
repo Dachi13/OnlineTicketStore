@@ -26,8 +26,7 @@ CREATE TABLE public."Events"
 );
 
 
-CREATE
-OR REPLACE PROCEDURE public.spAddEvent(
+CREATE OR REPLACE PROCEDURE public.spAddEvent(
     IN p_name TEXT,
 	IN p_description TEXT,
 	IN p_location TEXT,

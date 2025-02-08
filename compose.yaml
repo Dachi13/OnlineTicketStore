@@ -30,7 +30,6 @@ services:
       - "5432:5432"
     volumes:
       - eventdb_data:/var/lib/postgresql/data
-      - catalogdb_data:/var/lib/postgresql/data  
   
   basketdb:
     container_name: basketdb

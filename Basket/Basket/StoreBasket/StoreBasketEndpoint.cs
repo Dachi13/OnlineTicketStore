@@ -1,12 +1,12 @@
 namespace Basket.Basket.StoreBasket;
 
-public record StoreToBasketRequest(long TicketId, int Amount);
+public record StoreToBasketRequest(EventsBasket Basket);
 
-public record StoreToBasketResponse(bool StoredSuccessfully);
+public record StoreToBasketResponse(long? BasketId);
 
 public static class StoreBasketEndpoint
 {
-    public static void StoreBasketRoute(this IEndpointRouteBuilder app)
+    public static void AddBasketRoute(this IEndpointRouteBuilder app)
     {
         app.MapPost("/AddBasket", async (StoreToBasketRequest request, ISender sender) =>
             {
@@ -15,7 +15,7 @@ public static class StoreBasketEndpoint
                 var result = await sender.Send(storeBasketCommand);
 
                 return result.Match(
-                    _ => Results.Created($"/products/{result.Value.StoredSuccessfully}", result.Value),
+                    _ => Results.Created($"/products/{result.Value.BasketId}", result.Value),
                     error => error switch
                     {
                         { ErrorType: ErrorType.InternalServerError } => Results.InternalServerError(new
@@ -28,6 +28,5 @@ public static class StoreBasketEndpoint
             .ProducesProblem(StatusCodes.Status400BadRequest)
             .WithSummary("Store to Basket")
             .WithDescription("Store to Basket");
-        ;
     }
 }

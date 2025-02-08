@@ -21,6 +21,5 @@ public class Result
     public static Result Failure(Error error) => new(error);
 
     public static Result<TValue> Success<TValue>(TValue value) => new(value);
-
     public static Result<TValue> Failure<TValue>(Error errors) => new(errors);
 }

@@ -1,5 +1,3 @@
-using Event.Events.CreateEvent;
-
 var builder = WebApplication.CreateBuilder(args);
 
 var connectionString = builder.Configuration.GetConnectionString("Database")!;
