@@ -12,7 +12,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineTicketStore.DbMigrations", "OnlineTicketStore.DbMigrations\OnlineTicketStore.DbMigrations.csproj", "{CB0B688D-9105-4821-B9EA-FBA92B7A7A1B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basket", "Basket\Basket.csproj", "{0822CE16-4D53-4BCA-98CC-107D1FA054BE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basket", "Services\Basket\Basket.csproj", "{0822CE16-4D53-4BCA-98CC-107D1FA054BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
