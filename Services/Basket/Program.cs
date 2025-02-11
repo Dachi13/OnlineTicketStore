@@ -1,28 +1,5 @@
 var builder = WebApplication.CreateBuilder(args);
 
-// {
-//     EventsBasket basket = new EventsBasket();
-//     basket.Events =
-//     [
-//         new Event
-//         {
-//             TicketId = -1,
-//             Amount = 1,
-//             Price = (decimal)12.99
-//         },
-//         new Event
-//         {
-//             TicketId = -2,
-//             Amount = 1,
-//             Price = (decimal)13.99
-//         }
-//     ];
-//     
-//     var json = System.Text.Json.JsonSerializer.Serialize(basket, new System.Text.Json.JsonSerializerOptions { WriteIndented = true });
-//     Console.WriteLine(json);
-//     return;
-// }
-
 var connectionString = builder.Configuration.GetConnectionString("Database")!;
 
 // Configure Database
